@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TreeTraversal.Objects;
 
-namespace TreeTraversal
+namespace TreeTraversal.TreeExplorers
 {
     public class IterativeDfsTreeExplorer
     {
@@ -26,13 +27,13 @@ namespace TreeTraversal
                 // Just a safety measure, since null is a valid value to push.
                 if (currentNode == null)
                     continue;
-                    
+
                 _visitedNodes.Add(currentNode);
 
                 foreach (var node in currentNode.ChildNodes.Where(n => !_visitedNodes.Contains(n) && !_nodesStack.Contains(n)))
                 {
                     // There is no reason to wait until node is popped to find out it's the target.
-                    if(node.IsTargetNode)
+                    if (node.IsTargetNode)
                         return node;
 
                     _nodesStack.Push(node);

@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TreeTraversal.Objects;
 
-namespace TreeTraversal
+namespace TreeTraversal.TreeExplorers
 {
     public class RecursiveDfsTreeExplorer
     {

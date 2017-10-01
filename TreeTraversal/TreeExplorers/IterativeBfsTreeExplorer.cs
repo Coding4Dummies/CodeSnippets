@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TreeTraversal.Objects;
 
-namespace TreeTraversal
+namespace TreeTraversal.TreeExplorers
 {
     public class IterativeBfsTreeExplorer
     {
@@ -33,7 +34,7 @@ namespace TreeTraversal
                 foreach (var node in currentNode.ChildNodes.Where(n => !_visitedNodes.Contains(n) && !_queuedNodes.Contains(n)))
                 {
                     // There is no reason to wait until node is dequeued to find out it's the target.
-                    if(node.IsTargetNode)
+                    if (node.IsTargetNode)
                         return node;
 
                     _queuedNodes.Enqueue(node);
