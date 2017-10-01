@@ -27,7 +27,7 @@ namespace TreeTraversal
 
             // Just a safety measure, since null is a valid value to enqueue.
             if(currentNode == null)
-                FindTarget();
+                 return FindTarget();
 
             _visitedNodes.Add(currentNode);
             
